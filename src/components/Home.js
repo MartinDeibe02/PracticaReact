@@ -1,12 +1,15 @@
 import React from 'react'
+import '../css/Home.css'
+import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 import { Products } from './Products'
 
 export const Home = () => {
   return (
-    <div>
+    <div className='homeCss'>
         <Navbar/>
         <Products/>
+        <Footer/>
     </div>  
     )
 }

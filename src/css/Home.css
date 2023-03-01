@@ -1,0 +1,41 @@
+.homeCss{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 25px;
+}
+
+.navBar .img{
+    width: 80px;
+}
+
+.navBar .img img{
+    width: 100%;
+}
+
+.navBar .derecha{
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar .derecha .link{
+    color: black;
+    font-weight: 600px;
+    margin: auto 10px;
+    
+}
