@@ -1,41 +1,58 @@
-.homeCss{
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
 *{
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.navBar{
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px 25px;
+.hero{
+    background-size: cover;
+  background-position: center;
+  height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://cdn.nba.com/teams/legacy/www.nba.com/heat/sites/heat/files/22-05-10-76ers-series-so-far-article_heat.com-article-header-2000x750.jpg");
 }
 
-.navBar .img{
-    width: 80px;
-}
-
-.navBar .img img{
-    width: 100%;
-}
-
-.navBar .derecha{
-    display: flex;
-    flex-direction: row;
-}
-
-.navBar .derecha .link{
+.link{
+    text-decoration: none;
     color: black;
-    font-weight: 600px;
-    margin: auto 10px;
+}
+
+.link:hover{
+    color: white;
+}
+
+.logo{
+    color: white !important;
+    font-weight: bold;
+    font-size: 40px !important;
+}
+
+.logo2{
+    color: red;
+    font-weight: bold;
+    font-size: 40px; 
+}
+
+.button{
+    border: none;
+    background: red;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    transition: .4s;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.navbar-toggler{
+
+    background-color: rgba(255,255,255) !important;
+
+    }
     
+
+.button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
