@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {storage, db}  from '../config/config'
+import { Navbar } from './Navbar'
 
 
 
@@ -54,7 +55,10 @@ export const AddJersey = () => {
     }
 
   return (
+    <div>
+          <Navbar/>
     <div className='container'>
+
         <br/>
             <h2>ADD JERSEY</h2>
         <hr/>
@@ -80,6 +84,7 @@ export const AddJersey = () => {
         </form>
 
         {error && <span>{error}</span>}
+    </div>
     </div>
   )
 }
