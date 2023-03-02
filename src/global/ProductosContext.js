@@ -19,6 +19,7 @@ export class ProductosContextProvider extends React.Component{
                         JerseyID: cambios.doc.id,
                         JerseyName: cambios.doc.data().JerseyName,
                         JerseyDescription: cambios.doc.data().JerseyDescription,
+                        JerseyPrice: cambios.doc.data().JerseyPrice,
                         JerseyImage: cambios.doc.data().JerseyImage,
 
                     })

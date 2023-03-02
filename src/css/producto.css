@@ -1,0 +1,27 @@
+.xd{
+    transition: 0.5s all ease-in-out;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 400px;
+    
+}
+
+.photo{
+    border-radius: 10px;
+    width: 400px;
+    height: 390px;
+}
+
+.xd:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px gray;
+
+}
+
+.btn{
+    height: 50px;
+}
+
+.xd1{
+    width: 400px;
+}
