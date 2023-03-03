@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {storage, db}  from '../config/config'
+import { Footer } from './Footer';
 import { Navbar } from './Navbar'
 
 
@@ -12,8 +13,10 @@ export const AddJersey = () => {
     const [jerseyImage, setJerseyImage] = useState(null);
     const [error, setError] = useState('');
 
-    const types = ['image/png', 'image/jpeg']
+    //Imagenes permitidad
+    const types = ['image/png', 'image/jpeg'] 
 
+    //Jersey handler
     const jerseyImgHandler = (e) => {
       let archivo = e.target.files[0];
       if(archivo && types.includes(archivo.type)){
@@ -25,8 +28,11 @@ export const AddJersey = () => {
       }
     }
 
+
+    //evento cuando se envia el formulario
     const addJersey = (e) =>{
       e.preventDefault();
+      //Subo la imagen a la bd
       const upload = storage.ref(`imagenes-nba/${jerseyImage.name}`).put(jerseyImage);
       upload.on('state_changed', snapshot=>{
         const progreso = (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
@@ -34,7 +40,7 @@ export const AddJersey = () => {
       },err=>{
         setError(err.message)
     },()=>{
-      
+      // Guardo en la bd
       storage.ref('imagenes-nba').child(jerseyImage.name).getDownloadURL().then(url=>{
         db.collection('Productos').add({
           JerseyName: jerseyName,
@@ -85,6 +91,7 @@ export const AddJersey = () => {
 
         {error && <span>{error}</span>}
     </div>
+    <Footer/>
     </div>
   )
 }
