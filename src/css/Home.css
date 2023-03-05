@@ -5,6 +5,15 @@
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
+.buttonNav{
+    color: white;
+}
+
+.buttonNav:hover{
+    color: white;
+    text-decoration: none;
+}
+
 .hero{
     background-size: cover;
   background-position: center;
