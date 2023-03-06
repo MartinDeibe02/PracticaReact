@@ -70,3 +70,9 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+.name{
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
-import nike from '../images/nike.png';
+import nike from '../images/nba.png';
 import Usericon from '@mui/icons-material/AccountCircle';
 import PassIcon from '@mui/icons-material/VpnKey';
 import MailIcon from '@mui/icons-material/Mail';
@@ -110,7 +110,7 @@ export const SignUp = () => {
                     </form>
                     <div>
                       Ya tienes cuenta?
-                      <Link to='/login'>Registrate aqui</Link>
+                      <Link to='/login'> Registrate aqui</Link>
                     </div>
                     <br></br>
                     {error && <div className='error-msg'>{error}</div>}

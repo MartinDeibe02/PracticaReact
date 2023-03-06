@@ -2,13 +2,32 @@ import React, {useState} from 'react'
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import nike from '../images/nike.png';
-import Usericon from '@mui/icons-material/AccountCircle';
 import PassIcon from '@mui/icons-material/VpnKey';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from "react-router-dom";
+import { auth } from '../config/config';
+import {useNavigate} from "react-router-dom";
 
 
 export const Login = () => {
+
+  const history = useNavigate();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const login = (e) =>{
+    e.preventDefault();
+    auth.signInWithEmailAndPassword(email, password).then(()=>{
+
+      setEmail('');
+      setPassword('');
+      setError('');
+      history('/');
+    }).catch(err=>setError(err.message));
+  }
+
   return (
 
 <div>
@@ -28,23 +47,11 @@ export const Login = () => {
                   </div>
                   <div className='d-flex col flex-column justify-content-center '>
                     <p className="text-center h1 fw-bold mb-5 mt-4">
-                      LogIn
+                      Login
                     </p>
 
-                    <form className="mx-1 mx-md-4">
-                      <div className="d-flex flex-row align-items-center mb-4">
-                        <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example1c">
-                        <Usericon/>&nbsp;Nombre
-                          </label>
-                          <input
-                            type="text"
-                            id="nombre"
-                            className="form-control"
-                          />
-                          
-                        </div>
-                      </div>
+                    <form className="mx-1 mx-md-4" onSubmit={login}>
+                      
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
@@ -55,6 +62,7 @@ export const Login = () => {
                             type="email"
                             id="form3Example3c"
                             className="form-control"
+                            onChange={(e)=> setEmail(e.target.value)} value={email}
 
                           />
                           
@@ -70,6 +78,7 @@ export const Login = () => {
                             type="password"
                             id="form3Example4c"
                             className="form-control"
+                            onChange={(e)=> setPassword(e.target.value)} value={password}
 
                           />
                         </div>
@@ -88,6 +97,8 @@ export const Login = () => {
                       <Link to='/signUp'>Entra aqui</Link>
                     </div>
                     <br></br>
+                    {error && <div className='error-msg'>{error}</div>}
+
                   </div>
 
                 </div>

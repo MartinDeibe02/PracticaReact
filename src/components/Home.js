@@ -5,10 +5,10 @@ import { Navbar } from './Navbar'
 import { Products } from './Products'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const Home = () => {
+export const Home = ({user}) => {
   return (
     <div className='homeCss'>
-        <Navbar/>
+        <Navbar user={user}/>
         <Products/>
         <Footer/>
     </div>  
