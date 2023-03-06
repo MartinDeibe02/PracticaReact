@@ -26,8 +26,13 @@
     color: black;
 }
 
+.error-msg{
+    max-width: 300px;
+}
+
 .link:hover{
     color: white;
+    text-decoration: none;
 }
 
 .logo{
