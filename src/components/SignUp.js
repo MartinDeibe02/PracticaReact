@@ -48,7 +48,7 @@ export const SignUp = () => {
             <div className="card text-black">
               <div className="card-body p-md-5">
                 <div className="row justify-content-center">
-                  <div>
+                <div className="col d-flex flex-column justify-content-center">
                     <p className="text-center h1 fw-bold mb-5 mt-4">
                       Sign up
                     </p>
@@ -110,12 +110,12 @@ export const SignUp = () => {
                     </form>
                     <div>
                       Ya tienes cuenta?
-                      <Link to='/login'>Aqui</Link>
+                      <Link to='/login'>Registrate aqui</Link>
                     </div>
                     <br></br>
                     {error && <div className='error-msg'>{error}</div>}
                   </div>
-                  <div className="d-flex align-items-center">
+                  <div className="d-flex col-8-md align-items-center">
                     <img
                       src={nike}
                       className="img-fluid"
