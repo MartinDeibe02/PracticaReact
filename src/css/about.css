@@ -1,0 +1,13 @@
+.img{
+    width: 100%;
+}
+
+.back{
+    background-image: url('../images/kobe.png');
+    background-size: cover;
+    height: 50vh;
+}
+
+.back h3{
+    color: white;
+}
