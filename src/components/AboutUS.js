@@ -39,7 +39,7 @@ export const AboutUS = ({user}) => {
               <div class="bold">Ropa</div>
               <div class="big">Mujer</div>
             </div>
-            <button class="button"><Link className="white" to='/productos'> VER PRODUCTOS</Link></button>
+            <button class="button"><Link className="white" to='/productos'> Ver productos</Link></button>
           </div>
         </div>
 
@@ -49,7 +49,7 @@ export const AboutUS = ({user}) => {
               <div class="bold">Ropa</div>
               <div class="big">Hombre</div>
             </div>
-            <button class="button"><Link className="white" to='/productos'> VER PRODUCTOS</Link></button>
+            <button class="button"><Link className="white" to='/productos'> Ver productos</Link></button>
           </div>
         </div>
       </div>

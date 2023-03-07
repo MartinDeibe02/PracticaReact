@@ -11,6 +11,8 @@
     background-image: url("../images/wnba.png");
     width: 100%;
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
 
 }
 
@@ -33,6 +35,13 @@ h3{
     background-image: url("../images/lebron.png");
    width: 100%;
    background-size: cover;
+   background-color: rgba(0, 0, 0, 0.5);
+   background-blend-mode: multiply;
+}
+
+.right-side:hover, .left-side:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: multiply;
 }
 
 .white{
