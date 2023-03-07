@@ -1,3 +1,8 @@
+*{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+
+}
+
 .row{
     margin: 0;
 }
@@ -7,6 +12,10 @@
     width: 100%;
     background-size: cover;
 
+}
+
+h3{
+  font-weight: bold;
 }
 
 .left-side::before, .right-side::before{
@@ -65,7 +74,7 @@
     border: none;
     position: relative;
     margin: 0 auto;
-    height: 100px;
+    height: 300px;
   }
   
   .vertical::before {

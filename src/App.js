@@ -45,9 +45,9 @@ export class App extends Component {
       <ProductosContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Home user={this.state.user}/>} />
+            <Route exact path="/productos" element={<Home user={this.state.user}/>} />
             <Route  path="/addJersey" element={<AddJersey />} />
-            <Route  path="/AboutUs" element={<AboutUS />} />
+            <Route  path="/" element={<AboutUS user={this.state.user}/>} />
             <Route  path="/signUp" element={<SignUp />} />
             <Route  path="/logIn" element={<Login />} />
           </Routes>

@@ -84,7 +84,7 @@ export const SignUp = () => {
                     <form className="mx-1 mx-md-4" onSubmit={SignUp}>
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example1c">
+                        <label className="form-label" for="nombre">
                         <Usericon/>&nbsp;Nombre
                           </label>
                           <input
@@ -99,7 +99,7 @@ export const SignUp = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example1c">
+                        <label className="form-label" for="apellidos">
                         <Usericon/>&nbsp;Apellidos
                           </label>
                           <input
@@ -114,7 +114,7 @@ export const SignUp = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example3c">
+                        <label className="form-label" for="correo">
                         <MailIcon/>&nbsp; Correo
                           </label>
                           <input
@@ -130,7 +130,7 @@ export const SignUp = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example4c">
+                        <label className="form-label" for="contraseña">
                         <PassIcon/>&nbsp;Contraseña
                           </label>
                           <input
@@ -145,7 +145,7 @@ export const SignUp = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example4c">
+                        <label className="form-label" for="fecha">
                         <PassIcon/>&nbsp;Fecha nacimiento
                           </label>
                           <input

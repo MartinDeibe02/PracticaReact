@@ -10,20 +10,20 @@
 }
 
 .buttonNav:hover{
-    color: white;
+    color: rgb(179, 176, 176);
     text-decoration: none;
 }
 
 .hero{
     background-size: cover;
-  background-position: center;
-  height: 50vh;
+    background-position: center;
+    height: 50vh;
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://cdn.nba.com/teams/legacy/www.nba.com/heat/sites/heat/files/22-05-10-76ers-series-so-far-article_heat.com-article-header-2000x750.jpg");
 }
 
 .link{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .error-msg{
@@ -31,7 +31,7 @@
 }
 
 .link:hover{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 

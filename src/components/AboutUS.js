@@ -10,10 +10,10 @@ import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 
 
-export const AboutUS = () => {
+export const AboutUS = ({user}) => {
   return (
     <div>
-      <Navbar />
+      <Navbar user={user}/>
 
       <div class="row">
         <div className="col d-flex flex-column align-items-center mt-5">
@@ -39,7 +39,7 @@ export const AboutUS = () => {
               <div class="bold">Ropa</div>
               <div class="big">Mujer</div>
             </div>
-            <button class="button"><Link className="white" to='/'> VER PRODUCTOS</Link></button>
+            <button class="button"><Link className="white" to='/productos'> VER PRODUCTOS</Link></button>
           </div>
         </div>
 
@@ -49,22 +49,28 @@ export const AboutUS = () => {
               <div class="bold">Ropa</div>
               <div class="big">Hombre</div>
             </div>
-            <button class="button"><Link className="white" to='/'> VER PRODUCTOS</Link></button>
+            <button class="button"><Link className="white" to='/productos'> VER PRODUCTOS</Link></button>
           </div>
         </div>
       </div>
 
-      <div className="row mt-3 d-flex flex-row mb-3">
-          <div className="col-md d-flex justify-content-center">
+      <div className="row mt-5 d-flex flex-row mb-5">
+          <div className="col-md d-flex flex-column align-items-center justify-content-center">
             <SportsBasketballIcon sx={{ fontSize: 60 }} />
+            <h2 className="mt-4">Nuestros jerseys</h2>
+            <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </div>
             <hr className="vertical"/>
-          <div className="col-md d-flex justify-content-center">
-            <img className="nike" src={nikeLogo}></img>
+            <div className="col-md d-flex flex-column align-items-center justify-content-center">
+            <img className="nike" src={nikeLogo} alt='nike logo'></img>
+            <h2 className="mt-4">Nike</h2>
+            <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </div>
           <hr className="vertical"/>
-          <div className="col-md d-flex justify-content-center">
+          <div className="col-md d-flex flex-column align-items-center justify-content-center">
               <AddShoppingCartSharpIcon  sx={{ fontSize: 60 }} />
+              <h2 className="mt-4">Nuestro carro</h2>
+              <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           </div>
 
       </div>

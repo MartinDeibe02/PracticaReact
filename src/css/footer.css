@@ -1,0 +1,42 @@
+*{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+}
+
+
+.footer-class {
+    background-image: url('https://about.att.com/ecms/dam/snr/2019/February2019/StoryLevelBanner/02.05.19_Basketball_STORY_LEVEL_BANNER_1600x483.jpg');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.footer-class p {
+    color: rgba(255, 255, 255, 0.3); 
+}
+
+.footer-class .footer-heading {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 30px; 
+}
+
+
+.footer-class .menu {
+    margin-bottom: 30px; 
+}
+
+.down-menu {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.down-menu:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+footer {
+    padding: 7em; }

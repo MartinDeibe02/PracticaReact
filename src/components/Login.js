@@ -24,7 +24,7 @@ export const Login = () => {
       setEmail('');
       setPassword('');
       setError('');
-      history('/');
+      history('/productos');
     }).catch(err=>setError(err.message));
   }
 
@@ -55,7 +55,7 @@ export const Login = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example3c">
+                        <label className="form-label" for="correo">
                         <MailIcon/>&nbsp; Correo
                           </label>
                           <input
@@ -71,7 +71,7 @@ export const Login = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
-                        <label className="form-label" for="form3Example4c">
+                        <label className="form-label" for="contraseña">
                         <PassIcon/>&nbsp;Contraseña
                           </label>
                           <input
