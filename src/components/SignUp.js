@@ -15,27 +15,55 @@ export const SignUp = () => {
   //Redirect a login
   const history = useNavigate();
 
+
   const [nombre, setNombre] = useState('');
+  const [apellidos, setApellidos] = useState('');
   const [email, setEmail] = useState('');
+  const [fecha, setFecha] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  
+  const calcularEdad = (fechaNacimiento) => {
+    const fechaActual = new Date();
+    const fechanc = new Date(fechaNacimiento);
+    let diferencia = fechaActual.getFullYear() - fechanc.getFullYear();
+    const mesDiferencia = fechaActual.getMonth() - fechanc.getMonth();
+    
+    if (mesDiferencia < 0 || (mesDiferencia === 0 && fechaActual.getDate() < fechanc.getDate())) {
+      diferencia--;
+    }
+    return diferencia
+  }
 
   //Inserto en base de datos
   const SignUp = (e) =>{
     e.preventDefault();
+
+    //Compruebo fecha
+    const esMayorDeEdad = calcularEdad(fecha) >= 18;
+    if (!esMayorDeEdad) {
+      setError('Fecha no valida');
+    }else{
+
     auth.createUserWithEmailAndPassword(email,password).then((credenciales)=>{
       db.collection('Usuarios').doc(credenciales.user.uid).set({
         Nombre: nombre,
+        Apellidos: apellidos,
         Email: email,
+        Fecha: fecha,
         Password: password
       }).then(()=>{
         setNombre('');
+        setApellidos('');
         setEmail('');
         setPassword('');
+        setFecha(null);
         setError('');
         history('/login');
       }).catch(err=>setError(err.message));
     }).catch(err=>setError(err.message));
+  }
   }
 
   return (
@@ -71,6 +99,21 @@ export const SignUp = () => {
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <div className="form-outline flex-fill mb-0">
+                        <label className="form-label" for="form3Example1c">
+                        <Usericon/>&nbsp;Apellidos
+                          </label>
+                          <input
+                            type="text"
+                            id="nombre"
+                            className="form-control"
+                            onChange={(e)=> setApellidos(e.target.value)} value={apellidos}
+                          />
+                          
+                        </div>
+                      </div>
+
+                      <div className="d-flex flex-row align-items-center mb-4">
+                        <div className="form-outline flex-fill mb-0">
                         <label className="form-label" for="form3Example3c">
                         <MailIcon/>&nbsp; Correo
                           </label>
@@ -95,6 +138,21 @@ export const SignUp = () => {
                             id="form3Example4c"
                             className="form-control"
                             onChange={(e)=> setPassword(e.target.value)} value={password}
+
+                          />
+                        </div>
+                      </div>
+
+                      <div className="d-flex flex-row align-items-center mb-4">
+                        <div className="form-outline flex-fill mb-0">
+                        <label className="form-label" for="form3Example4c">
+                        <PassIcon/>&nbsp;Fecha nacimiento
+                          </label>
+                          <input
+                            type="date"
+                            id="form3Example4c"
+                            className="form-control"
+                            onChange={(e)=> setFecha(e.target.value)} value={fecha}
 
                           />
                         </div>

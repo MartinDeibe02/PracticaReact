@@ -9,6 +9,7 @@ import {
   ProductosContextProvider,
 } from "./global/ProductosContext";
 import {auth,db} from './config/config'
+import { AboutUS } from "./components/AboutUS";
 
 
 export class App extends Component {
@@ -46,6 +47,7 @@ export class App extends Component {
           <Routes>
             <Route exact path="/" element={<Home user={this.state.user}/>} />
             <Route  path="/addJersey" element={<AddJersey />} />
+            <Route  path="/AboutUs" element={<AboutUS />} />
             <Route  path="/signUp" element={<SignUp />} />
             <Route  path="/logIn" element={<Login />} />
           </Routes>

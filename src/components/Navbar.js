@@ -27,7 +27,7 @@ export const Navbar = ({user}) => {
             <div className="navbar-collapse collapse w-100" id="collapsingNavbar3">
                 
             {!user && <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
-                   <li className="nav-item">
+                    <li className="nav-item">
                         <button className="button"><Link to='/login' className='link'>Login</Link></button>
                     </li>
                     <li className="nav-item">
@@ -35,7 +35,8 @@ export const Navbar = ({user}) => {
                     </li>
                 </ul>}
                 {user && <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
-                        <li className="name">{user}</li>
+                        <li><button className="button">Usuario: {user}</button></li>
+
                         <li><button className="button"><Link to='/cart' className='link'><AddShoppingCartIcon/></Link></button></li>
 
                         <li><button className="button"><Link to='/signup' onClick={logout} className='link'>LogOut</Link></button></li>

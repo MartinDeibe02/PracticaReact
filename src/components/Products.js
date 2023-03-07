@@ -11,11 +11,11 @@ export const Products = () => {
 
 console.log(productos);
 
-  return (
+return (
     <>
             
             <div className="d-flex flex-wrap flex-row">
-                {productos.length === 0 && <div>slow internet...no products to display</div>}
+                {productos.length === 0 && <div>Cargando...</div>}
                 {productos.map(jersey => (
                     <div className="xd1 col-lg-4 d-flex justify-content-center align-content-center">
                     <div className="xd card d-flex justify-content-center align-content-center">
@@ -29,7 +29,7 @@ console.log(productos);
                                 <div>Price: {jersey.JerseyPrice}$</div>
                             </div>
                             <div className="col d-flex justify-content-center align-content-center">
-                                <button className="btn button btn-success"><AddShoppingCartIcon/>&nbsp;Añadir</button>
+                                <button className="button"><AddShoppingCartIcon/>&nbsp;Añadir</button>
                 
                             </div>
                         </div>
