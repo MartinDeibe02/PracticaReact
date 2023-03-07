@@ -36,7 +36,7 @@ export const Navbar = ({user}) => {
                 </ul>}
                 {user && <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
                         <li><button className="button">Usuario: {user}</button></li>
-
+                
                         <li><button className="button"><Link to='/cart' className='link'><AddShoppingCartIcon/></Link></button></li>
 
                         <li><button className="button"><Link to='/signup' onClick={logout} className='link'>LogOut</Link></button></li>

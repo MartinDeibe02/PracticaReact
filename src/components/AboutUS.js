@@ -1,42 +1,75 @@
-import React from 'react'
-import '../css/Home.css'
-import { Navbar } from './Navbar'
-import { Footer } from './Footer'
-import  kobe  from '../images/kobe.png'
-import '../css/about.css'
+import React from "react";
+import "../css/Home.css";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
+import "../css/about.css";
+import { Link } from "react-router-dom";
+import nikeLogo from '../images/nikeicon.png';
+import "bootstrap/dist/css/bootstrap.min.css";
+import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
+import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const AboutUS = () => {
   return (
     <div>
-        <Navbar/>
+      <Navbar />
 
-        <div class="container">
-            <div class="row">
-                <div class="col d-flex justify-content-between align-items-center">
-                <div class="col-4-md">
-                    <h2>Título 1</h2>
-                    <p>Información 1</p>
-                </div>
-                <div class="col-4-md">
-                    <h2>Título 2</h2>
-                    <p>Información 2</p>
-                </div>
-                <div class="col-4-md">
-                    <h2>Título 3</h2>
-                    <p>Información 3</p>
-                </div>
-                </div>
+      <div class="row">
+        <div className="col d-flex flex-column align-items-center mt-5">
+          <h3>Quienes somos?</h3>
+          <hr className="w-50" />
+          <p className="w-50">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <button className="button"><Link className="white" to={'/signup'}>Registrate</Link></button>
+        </div>
+      </div>
+
+      <div className="row mt-3">
+        <div class="split-pane col-xs-12 col-md-6 left-side">
+          <div>
+            <div class="text-content">
+              <div class="bold">Ropa</div>
+              <div class="big">Mujer</div>
             </div>
+            <button class="button"><Link className="white" to='/'> VER PRODUCTOS</Link></button>
+          </div>
         </div>
 
-                <div className='row mt-3 back'>
-                    <h3>XDDDD</h3>
-                </div>
-                
-        <Footer/>
+        <div class="split-pane col-xs-12 col-md-6 right-side">
+          <div>
+            <div class="text-content">
+              <div class="bold">Ropa</div>
+              <div class="big">Hombre</div>
+            </div>
+            <button class="button"><Link className="white" to='/'> VER PRODUCTOS</Link></button>
+          </div>
+        </div>
+      </div>
+
+      <div className="row mt-3 d-flex flex-row mb-3">
+          <div className="col-md d-flex justify-content-center">
+            <SportsBasketballIcon sx={{ fontSize: 60 }} />
+          </div>
+            <hr className="vertical"/>
+          <div className="col-md d-flex justify-content-center">
+            <img className="nike" src={nikeLogo}></img>
+          </div>
+          <hr className="vertical"/>
+          <div className="col-md d-flex justify-content-center">
+              <AddShoppingCartSharpIcon  sx={{ fontSize: 60 }} />
+          </div>
+
+      </div>
+
+      <Footer />
     </div>
-  )
-}
+  );
+};
