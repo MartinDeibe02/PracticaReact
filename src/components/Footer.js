@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-		<footer class="footer-class">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-12 text-center">
-						<h2 class="footer-heading"><Link className='down-menu' to='/'>NBAStore</Link></h2>
-						<p class="menu">
+		<footer className="footer-class">
+			<div className="container">
+				<div className="row justify-content-center">
+					<div className="col-md-12 text-center">
+						<h2 className="footer-heading"><Link className='down-menu' to='/'>NBAStore</Link></h2>
+						<p className="menu">
               <Link className='down-menu' to='/' >Home</Link>
               <Link className='down-menu' to='/productos' >Productos</Link>
               <Link className='down-menu' to='/login' >Login</Link>

@@ -10,6 +10,8 @@ import {
 } from "./global/ProductosContext";
 import {auth,db} from './config/config'
 import { AboutUS } from "./components/AboutUS";
+import { CarritoContextProvider } from "./global/CarritoContext";
+import { Carrito } from "./components/Carrito";
 
 
 export class App extends Component {
@@ -43,15 +45,18 @@ export class App extends Component {
     
     return (
       <ProductosContextProvider>
+        <CarritoContextProvider>
         <BrowserRouter>
           <Routes>
             <Route exact path="/productos" element={<Home user={this.state.user}/>} />
+            <Route exact path="/cart" element={<Carrito user={this.state.user}/>} />
             <Route  path="/addJersey" element={<AddJersey />} />
             <Route  path="/" element={<AboutUS user={this.state.user}/>} />
             <Route  path="/signUp" element={<SignUp />} />
             <Route  path="/logIn" element={<Login />} />
           </Routes>
         </BrowserRouter>
+        </CarritoContextProvider>
       </ProductosContextProvider>
     );
   }

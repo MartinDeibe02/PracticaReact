@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import { ProductosContext } from '../global/ProductosContext'
 import '../css/producto.css'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { CarritoContext } from '../global/CarritoContext';
 
 
 
@@ -9,7 +10,13 @@ export const Products = () => {
 
   const {productos} = useContext(ProductosContext);
 
-console.log(productos);
+//console.log(productos);
+
+/*const datos  = useContext(CarritoContext);
+console.log(datos);*/
+
+const {dispatch} = useContext(CarritoContext);
+
 
 return (
     <>
@@ -29,7 +36,7 @@ return (
                                 <div>Price: {jersey.JerseyPrice}$</div>
                             </div>
                             <div className="col d-flex justify-content-center align-content-center">
-                                <button className="button"><AddShoppingCartIcon/>&nbsp;Añadir</button>
+                                <button className="button" onClick={() =>dispatch({type: 'Añadir_carrito', id:jersey.JerseyID, jersey})}><AddShoppingCartIcon/>&nbsp;Añadir</button>
                 
                             </div>
                         </div>
