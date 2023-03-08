@@ -15,7 +15,7 @@ export const AboutUS = ({user}) => {
     <div>
       <Navbar user={user}/>
 
-      <div class="row">
+      <div className="row">
         <div className="col d-flex flex-column align-items-center mt-5">
           <h3>Quienes somos?</h3>
           <hr className="w-50" />
@@ -33,23 +33,23 @@ export const AboutUS = ({user}) => {
       </div>
 
       <div className="row mt-3">
-        <div class="split-pane col-xs-12 col-md-6 left-side">
+        <div className="split-pane col-xs-12 col-md-6 left-side">
           <div>
-            <div class="text-content">
-              <div class="bold">Ropa</div>
-              <div class="big">Mujer</div>
+            <div className="text-content">
+              <div className="bold">Ropa</div>
+              <div className="big">Mujer</div>
             </div>
-            <button class="button"><Link className="white" to='/productos'> Ver productos</Link></button>
+            <button className="button"><Link className="white" to='/productos'> Ver productos</Link></button>
           </div>
         </div>
 
-        <div class="split-pane col-xs-12 col-md-6 right-side">
+        <div className="split-pane col-xs-12 col-md-6 right-side">
           <div>
-            <div class="text-content">
-              <div class="bold">Ropa</div>
-              <div class="big">Hombre</div>
+            <div className="text-content">
+              <div className="bold">Ropa</div>
+              <div className="big">Hombre</div>
             </div>
-            <button class="button"><Link className="white" to='/productos'> Ver productos</Link></button>
+            <button className="button"><Link className="white" to='/productos'> Ver productos</Link></button>
           </div>
         </div>
       </div>

@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import { auth } from "../config/config";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { CarritoContext } from "../global/CarritoContext";
 
 
 
 export const Navbar = ({user}) => {
 
+
+    const {totalProds} = useContext(CarritoContext);
     const history = useNavigate();
 
     const logout = () =>{
@@ -41,7 +44,7 @@ export const Navbar = ({user}) => {
                         <li><button className="button">Usuario: {user}</button></li>
                         <li className="nav-item"><button className="button"><Link to='/' className='link'>Home</Link></button></li>
                         <li className="nav-item"><button className="button"><Link to='/productos' className='link'>Productos</Link></button></li>
-                        <li><button className="button"><Link to='/cart' className='link'><AddShoppingCartIcon/></Link></button></li>
+                        <li><button className="button"><Link to='/cart' className='link'><AddShoppingCartIcon/>{totalProds}</Link></button></li>
 
                         <li><button className="button"><Link to='/signup' onClick={logout} className='link'>LogOut</Link></button></li>
                     </ul>}

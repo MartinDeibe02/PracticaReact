@@ -17,6 +17,7 @@ export const Products = () => {
 /*const datos  = useContext(CarritoContext);
 console.log(datos);*/
 
+
 const {dispatch} = useContext(CarritoContext);
 
 

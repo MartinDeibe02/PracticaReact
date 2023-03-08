@@ -54,14 +54,14 @@ export const Carrito = ({user}) => {
                             <h6 className="text-black mb-0">{jersey.JerseyName}</h6>
                           </div>
                           <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                            <button className="btn btn-link px-2"><ArrowBackIcon  style={{ color: 'red' }}/>
-                            </button>
+                            <div className="btn btn-link px-2" onClick={() => console.log('disminuir')}><ArrowBackIcon  style={{ color: 'red' }}/>
+                            </div>
       
-                            <input id="form1" min="0" name="quantity" value='1' type="number"
-                              className="form-control mt-2 form-control-sm"></input>
+                            <label id="form1" name="quantity"
+                              className="form-control mt-2 form-control-sm"> {jersey.cantidad}</label>
       
-                            <button className="btn btn-link px-2"><ArrowForwardIcon  style={{ color: 'red' }}/>
-                            </button>
+                            <div className="btn btn-link px-2" onClick={() => console.log('aumentar')}><ArrowForwardIcon  style={{ color: 'red' }}/>
+                            </div>
                           </div>
                           <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                             <h6 className="mb-0">{jersey.JerseyPrice} $</h6>
