@@ -1,3 +1,31 @@
 #form1{
     width: 50px;
 }
+
+.button{
+    border: none;
+    background: red;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    transition: .4s;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.button:hover{
+    color: white;
+}
+
+.h-custom{
+    background-color: #eee;
+}
+
+.select{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+}

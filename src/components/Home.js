@@ -9,16 +9,6 @@ import { auth } from '../config/config';
 
 export const Home = ({user}) => {
 
-
-  const history = useNavigate();
-  //Si el usuario no esta logeado no podra ver el home
-  useEffect(()=>{
-    auth.onAuthStateChanged(user=>{
-      if(!user){
-        history('/login');
-      }
-    })
-  });
   
   return (
     <div className='homeCss'>
