@@ -12,6 +12,7 @@ import {auth,db} from './config/config'
 import { AboutUS } from "./components/AboutUS";
 import { CarritoContextProvider } from "./global/CarritoContext";
 import { Carrito } from "./components/Carrito";
+import { Detalle } from "./components/Detalle";
 
 
 export class App extends Component {
@@ -54,6 +55,7 @@ export class App extends Component {
             <Route  path="/" element={<AboutUS user={this.state.user}/>} />
             <Route  path="/signUp" element={<SignUp />} />
             <Route  path="/logIn" element={<Login />} />
+            <Route  path="/detalle" element={<Detalle />} />
           </Routes>
         </BrowserRouter>
         </CarritoContextProvider>
