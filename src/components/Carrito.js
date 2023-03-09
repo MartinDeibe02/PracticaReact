@@ -11,17 +11,17 @@ import { auth } from '../config/config';
 import { useEffect } from 'react';
 
 export const Carrito = ({user}) => {
-    const { carritoCompra,dispatch, precioTotal, totalProds } = useContext(CarritoContext);
+    const { carritoCompra,dispatch, precioTotal } = useContext(CarritoContext);
 
     const history = useNavigate();
 
     useEffect(() => {
-        auth.onAuthStateChanged(user => {
-            if (!user) {
-                history.push('/login');
-            }
-        })
-    })
+      auth.onAuthStateChanged(user => {
+          if (!user) {
+              history('/login');
+          }
+      })
+  })
   return (
     
     <div>
@@ -54,20 +54,20 @@ export const Carrito = ({user}) => {
                             <h6 className="text-black mb-0">{jersey.JerseyName}</h6>
                           </div>
                           <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                            <div className="btn btn-link px-2" onClick={() => console.log('disminuir')}><ArrowBackIcon  style={{ color: 'red' }}/>
+                            <div className="btn btn-link px-2" onClick={() => dispatch({type : 'restar', id:jersey.JerseyID, jersey})}><ArrowBackIcon  style={{ color: 'red' }}/>
                             </div>
       
                             <label id="form1" name="quantity"
                               className="form-control mt-2 form-control-sm"> {jersey.cantidad}</label>
       
-                            <div className="btn btn-link px-2" onClick={() => console.log('aumentar')}><ArrowForwardIcon  style={{ color: 'red' }}/>
+                            <div className="btn btn-link px-2" onClick={() => dispatch({type : 'sumar', id:jersey.JerseyID, jersey})}><ArrowForwardIcon  style={{ color: 'red' }}/>
                             </div>
                           </div>
                           <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                             <h6 className="mb-0">{jersey.JerseyPrice} $</h6>
                           </div>
                           <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-                            <Link href="#!" className="text-muted"><DeleteForeverIcon/></Link>
+                            <div className="btn btn-link text-muted" onClick={() => dispatch({type : 'borrar', id:jersey.JerseyID, jersey})}><DeleteForeverIcon/></div>
                           </div>
                         </div>
 

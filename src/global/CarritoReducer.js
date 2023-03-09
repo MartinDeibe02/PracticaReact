@@ -1,9 +1,9 @@
 
-import { toast, configure } from 'react-toastify';
+import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 toast.configure({
-    position: "top-right",
+    position: toast.POSITION.BOTTOM_RIGHT,
     autoClose: 2000,
     hideProgressBar: false,
     closeOnClick: true,
@@ -33,7 +33,7 @@ export const CarritoReducer = (state, action) =>{
             }else{
                 jersey = action.jersey;
                 jersey['cantidad'] = 1;
-                jersey['precioTotal'] = jersey.JerseyPrice * jersey.cantidad;
+                jersey['precioTotalProductos'] = jersey.JerseyPrice * jersey.cantidad;
                 cantidadActualizada = totalProds + 1;
                 precioActualizado = precioTotal + jersey.JerseyPrice;
                 toast.info('Producto añadido a la cesta');
@@ -41,9 +41,50 @@ export const CarritoReducer = (state, action) =>{
                 return{
                     carritoCompra:[jersey, ...carritoCompra], precioTotal: precioActualizado, totalProds: cantidadActualizada
                 }
+
             }
-            break;
 
+            case 'sumar':
+                jersey=action.jersey;
+                jersey.cantidad=++jersey.cantidad;
+                jersey.precioTotalProductos= jersey.JerseyPrice * jersey.cantidad;
+                cantidadActualizada = totalProds + 1;
+                precioActualizado = precioTotal + jersey.JerseyPrice;
+                index=carritoCompra.findIndex(cart=>cart.JerseyID===action.id);
+                carritoCompra[index] = jersey;
+                return {
+                    carritoCompra:[...carritoCompra],precioTotal: precioActualizado, totalProds: cantidadActualizada
+                }
 
+            case 'restar':
+                jersey=action.jersey;
+                if(jersey.cantidad>1){
+                    jersey.cantidad= jersey.cantidad -1;
+                    jersey.precioTotalProductos= jersey.JerseyPrice * jersey.cantidad;
+                    cantidadActualizada = totalProds - 1;
+                    precioActualizado = precioTotal - jersey.JerseyPrice;
+                    index=carritoCompra.findIndex(cart=>cart.JerseyID===action.id);
+                    carritoCompra[index] = jersey;
+
+                    return {
+                        carritoCompra:[...carritoCompra],precioTotal: precioActualizado, totalProds: cantidadActualizada
+                    }
+                }else{
+                    toast.error('La cantidad minima es 1');
+
+                    return state;
+                }
+            
+            case 'borrar':
+                const objBorrar = carritoCompra.filter(jersey => jersey.JerseyID !== action.id);
+                jersey = action.jersey;
+                cantidadActualizada = totalProds - jersey.cantidad;
+                precioActualizado = precioTotal - jersey.cantidad * jersey.JerseyPrice;
+                return {
+                    carritoCompra: [...objBorrar], precioTotal: precioActualizado, totalProds: cantidadActualizada
+                }
+        
+            default:
+                return state;
     }
 }

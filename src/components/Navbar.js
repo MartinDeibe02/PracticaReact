@@ -39,6 +39,8 @@ export const Navbar = ({user}) => {
                     <li className="nav-item">
                         <button className="button"><Link to='/signup' className='link'>Signup</Link></button>
                     </li>
+                    <li className="nav-item"><button className="button"><Link to='/cart' className='link'><AddShoppingCartIcon/>{totalProds}</Link></button></li>
+
                 </ul>}
                 {user && <ul className="nav navbar-nav ml-auto w-100 justify-content-end">
                         <li><button className="button">Usuario: {user}</button></li>
