@@ -19,6 +19,7 @@
     background-position: center;
     height: 50vh;
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://cdn.nba.com/teams/legacy/www.nba.com/heat/sites/heat/files/22-05-10-76ers-series-so-far-article_heat.com-article-header-2000x750.jpg");
+    z-index: 2;
 }
 
 .link{
