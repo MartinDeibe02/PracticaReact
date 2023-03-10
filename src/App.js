@@ -55,7 +55,7 @@ export class App extends Component {
             <Route  path="/" element={<AboutUS user={this.state.user}/>} />
             <Route  path="/signUp" element={<SignUp />} />
             <Route  path="/logIn" element={<Login />} />
-            <Route  path="/detalle" element={<Detalle />} />
+            <Route  exact path="/detalle/:jerseyId" element={<Detalle />} />
           </Routes>
         </BrowserRouter>
         </CarritoContextProvider>
