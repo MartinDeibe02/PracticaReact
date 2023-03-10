@@ -34,6 +34,9 @@ export const Navbar = ({user}) => {
                         <button className="button"><Link to='/' className='link'>Home</Link></button>
                     </li>
                     <li className="nav-item">
+                        <button className="button"><Link to='/productos' className='link'>Productos</Link></button>
+                    </li>
+                    <li className="nav-item">
                         <button className="button"><Link to='/login' className='link'>Login</Link></button>
                     </li>
                     <li className="nav-item">
