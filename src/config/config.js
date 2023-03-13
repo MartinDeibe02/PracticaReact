@@ -6,15 +6,16 @@ import 'firebase/compat/storage';
 
 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAwMQyGcoXeMyJMMFzpxvPKy3VZ434JskM",
-    authDomain: "nba-react-c2fef.firebaseapp.com",
-    databaseURL: "https://nba-react-c2fef-default-rtdb.firebaseio.com",
-    projectId: "nba-react-c2fef",
-    storageBucket: "nba-react-c2fef.appspot.com",
-    messagingSenderId: "716045653724",
-    appId: "1:716045653724:web:9d54e19bc5d7b0ab13c619",
-    measurementId: "G-FPY9CXM1LW"
+  const firebaseConfig = {
+    apiKey: "AIzaSyB0YtHfY91qenJ6nRYkCdjOuOCW0jwWmsg",
+    authDomain: "nba-react-9befd.firebaseapp.com",
+    databaseURL: "https://nba-react-9befd-default-rtdb.firebaseio.com",
+    projectId: "nba-react-9befd",
+    storageBucket: "nba-react-9befd.appspot.com",
+    messagingSenderId: "224074957018",
+    appId: "1:224074957018:web:62d039fa290a59670f25e3",
+    measurementId: "G-56REHEG4SW"
+  
   };
 
 firebase.initializeApp(firebaseConfig);
