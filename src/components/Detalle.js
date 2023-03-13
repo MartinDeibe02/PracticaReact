@@ -23,7 +23,7 @@ export const Detalle = () => {
         .doc(jerseyId);
       jerseyRef.get().then((doc) => {
         if (doc.exists) {
-          const jersey = doc.data();
+          const jersey = {...doc.data(), JerseyID: doc.id};
           setjersey(jersey);
           console.log(jersey);
         } else {
@@ -60,7 +60,7 @@ export const Detalle = () => {
                   dispatch({
                     type: "Añadir_carrito",
                     id: jersey.JerseyID,
-                    jersey,
+                    jersey
                   })
                 }
               >
