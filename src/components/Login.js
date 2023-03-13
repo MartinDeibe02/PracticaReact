@@ -94,7 +94,7 @@ export const Login = () => {
                     </form>
                     <div>
                       No tienes cuenta?
-                      <Link to='/signUp'>Entra aqui</Link>
+                      <Link to='/signUp'>Registrate aqui</Link>
                     </div>
                     <br></br>
                     {error && <div className='error-msg'>{error}</div>}

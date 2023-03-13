@@ -168,7 +168,7 @@ export const SignUp = () => {
                     </form>
                     <div>
                       Ya tienes cuenta?
-                      <Link to='/login'> Registrate aqui</Link>
+                      <Link to='/login'> Inicia sesion aqui</Link>
                     </div>
                     <br></br>
                     {error && <div className='error-msg'>{error}</div>}
