@@ -53,7 +53,7 @@ export class App extends Component {
             <Route exact path="/cart" element={<Carrito user={this.state.user}/>} />
             <Route  path="/addJersey" element={<AddJersey />} />
             <Route  path="/" element={<AboutUS user={this.state.user}/>} />
-            <Route  path="/signUp" element={<SignUp />} />
+            <Route  path="/signUp" element={<SignUp  user={this.state.user}/>} />
             <Route  path="/logIn" element={<Login />} />
             <Route  exact path="/detalle/:jerseyId" element={<Detalle />} />
           </Routes>

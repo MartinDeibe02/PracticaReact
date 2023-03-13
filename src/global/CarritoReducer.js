@@ -1,8 +1,6 @@
 
-import { useContext } from 'react';
 import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { CarritoContext } from './CarritoContext';
 
 toast.configure({
     position: toast.POSITION.BOTTOM_RIGHT,
@@ -31,13 +29,9 @@ export const CarritoReducer = (state, action) =>{
             const check = carritoCompra.find(jersey=>jersey.JerseyID === action.id);
             console.log(action.id);
             if(check){
-                toast.info('Producto añadido a la cesta');
-                cantidadActualizada = totalProds + 1;
-
-                return{ carritoCompra: carritoCompra.map(jersey => jersey.JerseyID === action.id ? {...jersey, cantidad: jersey.cantidad + 1, precioTotalProductos: jersey.JerseyPrice * (jersey.cantidad + 1)} : jersey),
-                precioTotal: precioActualizado,
-                totalProds: cantidadActualizada
-            }
+                toast.error('Producto ya en la cesta');
+                return state;
+            
             }else{
                 jersey = action.jersey;
                 jersey['cantidad'] = 1;

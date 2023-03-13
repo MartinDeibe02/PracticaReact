@@ -8,12 +8,33 @@ import MailIcon from '@mui/icons-material/Mail';
 import {auth,db} from '../config/config';
 import { Link } from "react-router-dom";
 import {useNavigate} from "react-router-dom";
+import { useEffect } from "react";
+import { toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure({
+    position: toast.POSITION.BOTTOM_RIGHT,
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: false,
+    progress: undefined,
+});
 
 
-export const SignUp = () => {
+export const SignUp = ({user}) => {
 
   //Redirect a login
   const history = useNavigate();
+
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            history('/');
+        }
+    })
+})
 
 
   const [nombre, setNombre] = useState('');
