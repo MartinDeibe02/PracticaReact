@@ -72,6 +72,16 @@
     cursor: pointer;
 }
 
+.button:active {
+    animation: animacion 0.5s;
+  }
+  
+  @keyframes animacion {
+    0% { transform: scale(1); }
+    50% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+
 .name{
     font-size: 30px;
     color: white;
