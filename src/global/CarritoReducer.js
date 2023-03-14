@@ -76,6 +76,14 @@ export const CarritoReducer = (state, action) =>{
 
                     return state;
                 }
+
+                case 'Logout':
+                    return {
+                    ...state,
+                    carritoCompra: [],
+                    precioTotal: 0,
+                    totalProds: 0
+                    }
             
             case 'borrar':
                 const objBorrar = carritoCompra.filter(jersey => jersey.JerseyID !== action.id);

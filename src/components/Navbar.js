@@ -7,7 +7,10 @@ import { CarritoContext } from "../global/CarritoContext";
 
 
 
+
 export const Navbar = ({user}) => {
+
+    const {dispatch} = useContext(CarritoContext);
 
 
     const {totalProds} = useContext(CarritoContext);
@@ -16,6 +19,7 @@ export const Navbar = ({user}) => {
     const logout = () =>{
         auth.signOut().then(()=>{
             history('/login');
+            dispatch({ type: 'Logout' });
         })
     }
 
