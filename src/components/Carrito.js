@@ -112,7 +112,7 @@ export const Carrito = ({user}) => {
                           <h5>{precioTotal} $</h5>
                         </div>
       
-                        <button type="button" className=" button btn btn-block btn-lg">Register</button>
+                        <button type="button" className=" button btn btn-block btn-lg">Comprar</button>
       
                       </div>
                     </div>
