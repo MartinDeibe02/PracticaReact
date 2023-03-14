@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Practica React E-Commerce NBA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Este proyecto trata de una página donde podras comprar todo tipo de camisetas relacionadas con el mundo del baloncesto. En un principio solo se venderán camisetas de jugadores de la NBA, pero en un futuro su venderan camisetas de ligas como G-League, LEB, ACB...
 
-In the project directory, you can run:
+## Guía de uso
+
+Para poder ejecutar y usar la aplicación web tendremos que descargar el proyecto y abrirlo en el Visual Studio Code.
+Una vez abierto el proyecto tendremos que ejecutar una serie de comandos:
+
+### `npm install`
+
+Este comando nos permitira instalar todos los paquetes que contiene el proyecto para que no nos de ningun tipo de error.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Una vez instalados los paquetes, podremos ejecutar nuestra aplicación con este comando.
+Se nos abrira en nuestro explorador predeterminado una ventana con la ruta [http://localhost:3000](http://localhost:3000).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Al tener la base de datos en Firebase, no tendremos que importar ninguna base de datos ni usar ningun tipo de framework externo como Spring.(credenciales de la cuenta de google/firebase en la entrega de la practica)
 
-### `npm test`
+## Funcionamiento
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Esta pagina es un e-commerce dirigida a los amantes del baloncesto. En ella podran encontrar todo tipo de camisetas y prendas relacionadas con el baloncesto.
 
-### `npm run build`
+La pagina principal nos presentará un poco como es la temática y el diseño de nuestra marca y podremos acceder desde ella a los distintos tipos de vistas desde la barra de navegacion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Si seguimos con el orden de la barra de navegación, la siguiente ventana seria la ventana de productos, en la cual se nos presentaran los distintos productos ofrecidos por nuestra marca. Para poder añadir un producto a nuestro carrito, aunque antes de entrar al carrito tendremos que iniciar sesion/registrarnos, podremos hacerlo como en la pantalla de productos como en la pantalla de detalles, a la que accederemos pulsando en la imagen de cada producto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para finalizar tendremos las páginas de iniciar sesión, registrar y carrtito. En esta ultima tendremos todos los productos que hemos añadido prviamente al carro, asi como el precio total de la compra.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Además de esto, tenemos una página adicional en la que podremos añadir productos a la pagina web la cual se accedera mediante url (/addJersey)
 
-### `npm run eject`
+### Tecnologias utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Visual Studio Code
+* Firebase
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Autor
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Martin Deibe Monteagudo
